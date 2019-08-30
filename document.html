@@ -1,0 +1,225 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<title>eGamingFund-SDK-0.0.1.md</title><link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color: #ffffff; --text-color: #333333; --code-block-bg-color: inherit; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+body { margin: 0px; padding: 0px; height: auto; bottom: 0px; top: 0px; left: 0px; right: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { background: rgb(181, 214, 252); text-shadow: none; }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; word-wrap: break-word; position: relative; padding-bottom: 70px; white-space: pre-wrap; overflow-x: visible; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  .CodeMirror-sizer { margin-left: 0px !important; }
+  .CodeMirror-gutters { display: none !important; }
+}
+.typora-export #write { margin: 0px auto; }
+#write > p:first-child, #write > ul:first-child, #write > ol:first-child, #write > pre:first-child, #write > blockquote:first-child, #write > div:first-child, #write > table:first-child { margin-top: 30px; }
+#write li > table:first-child { margin-top: -20px; }
+img { max-width: 100%; vertical-align: middle; }
+input, button, select, textarea { color: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+::before, ::after, * { box-sizing: border-box; }
+#write p, #write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write div, #write pre { width: inherit; }
+#write p, #write h1, #write h2, #write h3, #write h4, #write h5, #write h6 { position: relative; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+p { -webkit-margin-before: 1rem; -webkit-margin-after: 1rem; -webkit-margin-start: 0px; -webkit-margin-end: 0px; }
+.typora-export p { white-space: normal; }
+.mathjax-block { margin-top: 0px; margin-bottom: 0px; -webkit-margin-before: 0rem; -webkit-margin-after: 0rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: bold; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; margin: 4px 0px 0px; }
+figure { max-width: 100%; overflow-x: auto; margin: 0px; }
+tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 80px; }
+.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+pre { white-space: pre-wrap; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: var(--code-block-bg-color); position: relative !important; }
+.md-diagram-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+.md-fences .CodeMirror.CodeMirror-wrap { top: -1.6em; margin-bottom: -1.6em; }
+.md-fences.mock-cm { white-space: pre-wrap; }
+.show-fences-line-number .md-fences { padding-left: 0px; }
+.show-fences-line-number .md-fences.mock-cm { padding-left: 40px; }
+.CodeMirror-line { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; padding-top: 1em; padding-bottom: 1em; }
+.footnotes + .footnotes { margin-top: -1em; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: transparent; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: normal; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li p, li .mathjax-block { margin: 0.5rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; }
+@media print {
+  html, body { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  h1, h2, h3, h4, h5, h6 { break-after: avoid-page; orphans: 2; }
+  p { orphans: 4; }
+  html.blink-to-pdf { font-size: 13px; }
+  .typora-export #write { padding-left: 1cm; padding-right: 1cm; padding-bottom: 0px; break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  @page { margin: 20mm 0mm; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 2.86rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > img:only-child { display: block; margin: auto; }
+p .md-image:only-child { display: inline-block; width: 100%; text-align: center; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.mathjax-block { white-space: pre; overflow: hidden; width: 100%; }
+p + .mathjax-block { margin-top: -1.143rem; }
+.mathjax-block:not(:empty)::after { display: none; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus { outline: none; box-shadow: none; }
+.task-list { list-style-type: none; }
+.task-list-item { position: relative; padding-left: 1em; }
+.task-list-item input { position: absolute; top: 0px; left: 0px; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc::after, .md-toc-content::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: bold; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+.md-tag { opacity: 0.5; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.8; font-family: monospace; }
+code { text-align: left; }
+h1 .md-tag, h2 .md-tag, h3 .md-tag, h4 .md-tag, h5 .md-tag, h6 .md-tag { font-weight: initial; opacity: 0.35; }
+a.md-print-anchor { border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: none !important; background: transparent !important; text-decoration: initial !important; text-shadow: initial !important; }
+.md-inline-math .MathJax_SVG .noError { display: none !important; }
+.mathjax-block .MathJax_SVG_Display { text-align: center; margin: 1em 0em; position: relative; text-indent: 0px; max-width: none; max-height: none; min-height: 0px; min-width: 100%; width: auto; display: block !important; }
+.MathJax_SVG_Display, .md-inline-math .MathJax_SVG_Display { width: auto; margin: inherit; display: inline-block !important; }
+.MathJax_SVG .MJX-monospace { font-family: monospace; }
+.MathJax_SVG .MJX-sans-serif { font-family: sans-serif; }
+.MathJax_SVG { display: inline; font-style: normal; font-weight: normal; line-height: normal; zoom: 90%; text-indent: 0px; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0px; min-height: 0px; border: 0px; padding: 0px; margin: 0px; }
+.MathJax_SVG * { transition: none; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; }
+
+
+:root { --side-bar-bg-color: #fafafa; --control-text-color: #777; }
+@font-face { font-family: "Open Sans"; font-style: normal; font-weight: normal; src: local("Open Sans Regular"), url("./github/400.woff") format("woff"); }
+@font-face { font-family: "Open Sans"; font-style: italic; font-weight: normal; src: local("Open Sans Italic"), url("./github/400i.woff") format("woff"); }
+@font-face { font-family: "Open Sans"; font-style: normal; font-weight: bold; src: local("Open Sans Bold"), url("./github/700.woff") format("woff"); }
+@font-face { font-family: "Open Sans"; font-style: italic; font-weight: bold; src: local("Open Sans Bold Italic"), url("./github/700i.woff") format("woff"); }
+html { font-size: 16px; }
+body { font-family: "Open Sans", "Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif; color: rgb(51, 51, 51); line-height: 1.6; }
+#write { max-width: 860px; margin: 0px auto; padding: 20px 30px 100px; }
+#write > ul:first-child, #write > ol:first-child { margin-top: 30px; }
+body > :first-child { margin-top: 0px !important; }
+body > :last-child { margin-bottom: 0px !important; }
+a { color: rgb(65, 131, 196); }
+h1, h2, h3, h4, h5, h6 { position: relative; margin-top: 1rem; margin-bottom: 1rem; font-weight: bold; line-height: 1.4; cursor: text; }
+h1:hover a.anchor, h2:hover a.anchor, h3:hover a.anchor, h4:hover a.anchor, h5:hover a.anchor, h6:hover a.anchor { text-decoration: none; }
+h1 tt, h1 code { font-size: inherit; }
+h2 tt, h2 code { font-size: inherit; }
+h3 tt, h3 code { font-size: inherit; }
+h4 tt, h4 code { font-size: inherit; }
+h5 tt, h5 code { font-size: inherit; }
+h6 tt, h6 code { font-size: inherit; }
+h1 { padding-bottom: 0.3em; font-size: 2.25em; line-height: 1.2; border-bottom: 1px solid rgb(238, 238, 238); }
+h2 { padding-bottom: 0.3em; font-size: 1.75em; line-height: 1.225; border-bottom: 1px solid rgb(238, 238, 238); }
+h3 { font-size: 1.5em; line-height: 1.43; }
+h4 { font-size: 1.25em; }
+h5 { font-size: 1em; }
+h6 { font-size: 1em; color: rgb(119, 119, 119); }
+p, blockquote, ul, ol, dl, table { margin: 0.8em 0px; }
+li > ol, li > ul { margin: 0px; }
+hr { height: 4px; padding: 0px; margin: 16px 0px; background-color: rgb(231, 231, 231); border-width: 0px 0px 1px; border-style: none none solid; border-top-color: initial; border-right-color: initial; border-left-color: initial; border-image: initial; overflow: hidden; box-sizing: content-box; border-bottom-color: rgb(221, 221, 221); }
+body > h2:first-child { margin-top: 0px; padding-top: 0px; }
+body > h1:first-child { margin-top: 0px; padding-top: 0px; }
+body > h1:first-child + h2 { margin-top: 0px; padding-top: 0px; }
+body > h3:first-child, body > h4:first-child, body > h5:first-child, body > h6:first-child { margin-top: 0px; padding-top: 0px; }
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 { margin-top: 0px; padding-top: 0px; }
+h1 p, h2 p, h3 p, h4 p, h5 p, h6 p { margin-top: 0px; }
+li p.first { display: inline-block; }
+ul, ol { padding-left: 30px; }
+ul:first-child, ol:first-child { margin-top: 0px; }
+ul:last-child, ol:last-child { margin-bottom: 0px; }
+blockquote { border-left: 4px solid rgb(221, 221, 221); padding: 0px 15px; color: rgb(119, 119, 119); }
+blockquote blockquote { padding-right: 0px; }
+table { padding: 0px; word-break: initial; }
+table tr { border-top: 1px solid rgb(204, 204, 204); margin: 0px; padding: 0px; }
+table tr:nth-child(2n) { background-color: rgb(248, 248, 248); }
+table tr th { font-weight: bold; border: 1px solid rgb(204, 204, 204); text-align: left; margin: 0px; padding: 6px 13px; }
+table tr td { border: 1px solid rgb(204, 204, 204); text-align: left; margin: 0px; padding: 6px 13px; }
+table tr th:first-child, table tr td:first-child { margin-top: 0px; }
+table tr th:last-child, table tr td:last-child { margin-bottom: 0px; }
+.CodeMirror-gutters { border-right: 1px solid rgb(221, 221, 221); }
+.md-fences, code, tt { border: 1px solid rgb(221, 221, 221); background-color: rgb(248, 248, 248); border-radius: 3px; font-family: Consolas, "Liberation Mono", Courier, monospace; padding: 2px 4px 0px; font-size: 0.9em; }
+.md-fences { margin-bottom: 15px; margin-top: 15px; padding: 8px 1em 6px; }
+.task-list { padding-left: 0px; }
+.task-list-item { padding-left: 32px; }
+.task-list-item input { top: 3px; left: 8px; }
+@media screen and (min-width: 914px) {
+}
+@media print {
+  html { font-size: 13px; }
+  table, pre { break-inside: avoid; }
+  pre { word-wrap: break-word; }
+}
+.md-fences { background-color: rgb(248, 248, 248); }
+#write pre.md-meta-block { padding: 1rem; font-size: 85%; line-height: 1.45; background-color: rgb(247, 247, 247); border: 0px; border-radius: 3px; color: rgb(119, 119, 119); margin-top: 0px !important; }
+.mathjax-block > .code-tooltip { bottom: 0.375rem; }
+#write > h3.md-focus::before { left: -1.5625rem; top: 0.375rem; }
+#write > h4.md-focus::before { left: -1.5625rem; top: 0.285714rem; }
+#write > h5.md-focus::before { left: -1.5625rem; top: 0.285714rem; }
+#write > h6.md-focus::before { left: -1.5625rem; top: 0.285714rem; }
+.md-image > .md-meta { border: 1px solid rgb(221, 221, 221); border-radius: 3px; font-family: Consolas, "Liberation Mono", Courier, monospace; padding: 2px 4px 0px; font-size: 0.9em; color: inherit; }
+.md-tag { color: inherit; }
+.md-toc { margin-top: 20px; padding-bottom: 20px; }
+.sidebar-tabs { border-bottom: none; }
+#typora-quick-open { border: 1px solid rgb(221, 221, 221); background-color: rgb(248, 248, 248); }
+#typora-quick-open-item { background-color: rgb(250, 250, 250); border-color: rgb(254, 254, 254) rgb(229, 229, 229) rgb(229, 229, 229) rgb(238, 238, 238); border-style: solid; border-width: 1px; }
+#md-notification::before { top: 10px; }
+.on-focus-mode blockquote { border-left-color: rgba(85, 85, 85, 0.12); }
+header, .context-menu, .megamenu-content, footer { font-family: "Segoe UI", Arial, sans-serif; }
+.file-node-content:hover .file-node-icon, .file-node-content:hover .file-node-open-state { visibility: visible; }
+.mac-seamless-mode #typora-sidebar { background-color: var(--side-bar-bg-color); }
+.md-lang { color: rgb(180, 101, 77); }
+
+
+
+
+
+
+</style>
+</head>
+<body class='typora-export' >
+<div  id='write'  class = 'is-node'><h3><a name='header-n0' class='md-header-anchor '></a>sdk文档</h3><blockquote><p>version: 0.0.1</p><ul><li>注意: </li></ul><ol start='' ><li>请暂时不要在调用接口中传任何中文字, 否则签名可能验证不通过. </li><li>测试接口或访问网站时, 当前最好使用测试账号的参数, 因为当前版本错误反馈不全. </li><li>当前暂未未提供查询账户gfg接口</li></ol></blockquote><h4><a name='header-n19' class='md-header-anchor '></a>接前准备</h4><ul><li><p>在eGF申请账号, 并获得账号id, 也作为sdk中merchantId使用</p></li><li><p>向eGF申请账号升级成厂商账号, eGF会给一个secretKey, secretKey一定要保密</p></li><li><p>与sdk产生交互的接口或h5编码格式一律使用utf-8</p></li><li><p>接口中所有传输的gfg的值 = 实际gfg * 10^8的方式存储, 所以这个值一定是整数</p></li><li><p>测试账号</p><ul><li><p>厂商账号</p><ul><li><code>id</code>: 5013220</li><li><code>email</code>: <a href='mailto:merchant@egf.com' target='_blank' >merchant@egf.com</a></li><li><code>nickname</code>: merchant</li><li><code>password</code>: aaa111</li><li><code>gfg</code>: 大概 100 * 10^-8</li><li><code>secretKey</code>: hjhjko#%)$3tghpo</li></ul></li><li><p>用户账号</p><ul><li><code>id</code>: 5013223</li><li><code>email</code>: <a href='mailto:user1@egf.com' target='_blank' >user1@egf.com</a></li><li><code>nickname</code>: user1</li><li><code>password</code>: aaa111</li><li><code>gfg</code>: 大概 100 * 10^-8</li></ul></li></ul></li></ul><h4><a name='header-n78' class='md-header-anchor '></a>登陆, 注册</h4><ol start='' ><li><p>打开<code>http://sdkui.egamingfund.org?merchantId=xxx&amp;callbackUrl=xxx</code></p><ul><li><code>xxx</code>指的是参数值</li><li><code>merchantId</code>是账号id</li><li><code>callbackUrl</code>是登陆成功后跳转的地址</li></ul></li><li><p>用户登陆注册成功之后, 点击<code>返回商户</code>页面跳转到<code>callbackUrl</code>的地址并且登陆参数会拼接在连接后面</p><ul><li><p><code>nickname</code>玩家昵称</p></li><li><p><code>timestamp</code>登陆时间</p></li><li><p><code>token</code>令牌</p></li><li><p><code>userId</code>玩家id</p></li><li><p><code>sign</code>签名.</p><ul><li>厂商可以通过这个签名验证用户信息的有效性</li><li>签名采用32位md5小写的形式</li><li>sign= md5(&quot;nickname=x&amp;timestamp=x&amp;token=x&amp;userId=x&amp;secretKey=x&quot;)</li></ul></li></ul></li></ol><h4><a name='header-n122' class='md-header-anchor '></a>支付</h4><ol start='' ><li><p>向eGF请求创建订单</p><ul><li><p>地址: <code>http://sdk.egamingfund.org/sdk/createOrder</code></p></li><li><p>http method: <code>POST</code></p></li><li><p>header: <code>Content-Type = application/json;charset=utf-8</code></p></li><li><p>request params: 当前一律采用utf-8编码格式</p><ul><li><p><code>merchantOrderId</code>: string, 商户的唯一订单id, 必须 </p></li><li><p><code>money</code>: string, gfg*10^8, 必须 </p></li><li><p><code>merchantId</code>: long, 商户的用户id, 必须 </p></li><li><p><code>payType</code>: string, 付款方式, 必须是gfg, 必须 </p></li><li><p><code>asyncNoticeUrl</code>: string, 订单回调通知URL, 访问方式必须是<code>GET</code>, 必须 </p></li><li><p><code>subject</code>: string, 商品主题, 必选 </p></li><li><p><code>body</code>: string, 商品描述, 可选 </p></li><li><p><code>extra</code>: string, 商户备注, 会在通知的时候还给商户, 可选 </p></li><li><p><code>charset</code>: string, 编码, 必须是utf-8, 必选 </p></li><li><p><code>sign</code>: 签名, 用于验证商户操作的合法性, 必须</p><ul><li>eGF可以通过这个签名验证厂商订单的的有效性</li><li>签名采用32位md5小写的形式</li><li>sign= md5(&quot;asyncNoticeUrl=x&amp;body=x&amp;charset=x&amp;extra=x&amp;merchantId=x&amp;merchantOrderId=x&amp;money=x&amp;payType=x&amp;subject=x&amp;secretKey=x&quot;)</li><li>如果可选的参数为null, 参数名也需要参与签名. 比如. extra=null, sign= md5(&quot;asyncNoticeUrl=x&amp;body=x&amp;charset=x&amp;extra=&amp;merchantId=x&amp;merchantOrderId=x&amp;money=x&amp;payType=x&amp;subject=x&amp;secretKey=x&quot;)</li></ul></li></ul></li><li><p>response params: 当前一律采用utf-8编码格式</p><ul><li><p><code>code</code>: 响应码</p><ul><li>1 = 成功 </li><li>2 = 失败 </li><li>3 = 缺失参数 </li><li>4 = 商家不存在 </li><li>5 = 验证码错误 </li><li>6 = 重复商家订单 </li><li>7 = 钱格式不正确 </li><li>8 = 支付方式不正确 </li><li>9 = 编码格式不正确 </li></ul></li><li><p><code>msg</code>: 提示语</p></li><li><p><code>data</code></p><ul><li><code>otcOrderId</code>: string, sdk订单号</li><li><code>timestamp</code>: long, gf端订单创建时间</li><li><code>merchantOrderId</code>: string, 你的订单号</li><li><code>extra</code>: string, 你的额外信息    <br/></li></ul></li></ul></li></ul></li><li><p>用户浏览器跳转sdk支付页面</p><ul><li><p>地址: <code>http://sdkui.egamingfund.org?orderId=xxx&amp;callbackUrl=xxx&amp;money=xxx&amp;merchantName=xxx</code></p><ul><li><code>xxx</code>指的是参数值</li><li><code>orderId</code>: sdk的订单id</li><li><code>callbackUrl</code>: 支付成功或者失败后跳转的地址</li><li><code>money</code>: 界面显示金额, 只是起到显示作用, 用户实际扣款只与创建订单时的<code>money</code>有关</li><li><code>merchantName</code>: 界面显示收款人姓名, 只是起到显示作用</li></ul></li></ul></li><li><p>用户支付成功后, 厂商在createOrder时<code>asyncNoticeUrl</code>接口会接收到eGF的支付成功的通知</p><ul><li><p>eGF调用方式:</p><ul><li><p>method: <code>GET</code></p></li><li><p>url: <code>asyncNoticeUrl?extra=x&amp;merchantId=x&amp;merchantOrderId=x&amp;money=x&amp;otcOrderId=x&amp;payeeId=x&amp;payerId=x&amp;payType=x&amp;sign=x</code> </p><ul><li><p><code>extra</code>: 创建订单时携带的备注信息, 返回URLEncode(extra)之后的extra</p></li><li><p><code>merchantId</code>: 厂商id</p></li><li><p><code>merchantOrderId</code>: 厂商的订单编号</p></li><li><p><code>money</code>: 订单金额, gfg*10^8</p></li><li><p><code>otcOrderId</code>: eGF订单id</p></li><li><p><code>payType</code>: 支付方式, 当前只能是<code>gfg</code></p></li><li><p><code>payeeId</code>: 收款人的eGFid</p></li><li><p><code>payerId</code>: 付款人的eGFid</p></li><li><p><code>sign</code>: 签名, </p><ul><li>只有签名验证通过, 才能确认是eGF的通知</li><li>签名采用32位md5小写的形式</li><li>sign= md5(&quot;extra=x&amp;merchantId=x&amp;merchantOrderId=x&amp;money=x&amp;otcOrderId=x&amp;payeeId=x&amp;payerId=x&amp;payType=x&amp;secretKey=x&quot;)</li><li>如果可选的参数为null, 参数名也需要参与签名. 比如. extra=null, sign= md5(&quot;extra=&amp;merchantId=x&amp;merchantOrderId=x&amp;money=x&amp;otcOrderId=x&amp;payeeId=x&amp;payerId=x&amp;payType=x&amp;secretKey=x&quot;)</li></ul></li></ul></li></ul></li><li><p>通知频率</p><ul><li>以第一次进入线程为起始时间，一分钟前，每十秒通知三次</li><li>一分钟至五分钟，每分钟通知三次</li><li>五分钟至半小时，每五分钟通知三次</li><li>半小时过至一天，每半小时通知三次</li><li>一天过后不通知</li></ul></li></ul></li></ol><h4><a name='header-n335' class='md-header-anchor '></a>厂商转账</h4><blockquote><p>这里指厂商将自己账号中的gfg转到目标用户的账号中</p></blockquote><ol start='' ><li><p>向eGF请求向目标用户转账</p><ul><li><p>地址: <code>http://sdk.egamingfund.org/sdk/merchantPayToUser</code></p></li><li><p>http method: <code>POST</code></p></li><li><p>header: <code>Content-Type = application/json;charset=utf-8</code></p></li><li><p>request params: 当前一律采用utf-8编码格式</p><ul><li><p><code>merchantOrderId</code>: string, 商户的唯一订单id, 必须 </p></li><li><p><code>merchantId</code>: long, 商户的用户eGFID, 必须 </p></li><li><p><code>withdrawUserId</code>: long, 目标用户的eGFID, 必须</p></li><li><p><code>money</code>: string, gfg*10^8, 必须 </p></li><li><p><code>payType</code>: string, 付款方式, 必须是gfg, 必须 </p></li><li><p><code>asyncNoticeUrl</code>: string, 订单回调通知URL, 访问方式必须是<code>GET</code>, 必须 </p></li><li><p><code>extra</code>: string, 商户备注, 会在通知的时候还给商户, 可选 </p></li><li><p><code>charset</code>: string, 编码, 必须是utf-8, 必选 </p></li><li><p><code>sign</code>: 签名, 用于验证商户操作的合法性, 必须</p><ul><li>eGF可以通过这个签名验证厂商订单的的有效性</li><li>签名采用32位md5小写的形式</li><li>sign= md5(&quot;asyncNoticeUrl=x&amp;charset=x&amp;extra=x&amp;merchantId=x&amp;merchantOrderId=x&amp;money=x&amp;payType=x&amp;withdrawUserId=x&amp;secretKey=x&quot;)</li><li>如果可选的参数为null, 参数名也需要参与签名. 比如. extra=null, sign= md5(&quot;asyncNoticeUrl=x&amp;charset=x&amp;extra=&amp;merchantId=x&amp;merchantOrderId=x&amp;money=x&amp;payType=x&amp;withdrawUserId=x&amp;secretKey=x&quot;)</li></ul></li></ul></li><li><p>response params: 当前一律采用utf-8编码格式</p><ul><li><p><code>code</code>: 响应码</p><ul><li>41 = 成功 </li><li>42 = 失败 </li><li>43 = 缺失参数 </li><li>44 = 商家不存在 </li><li>45 = 提现用户不存在 </li><li>46 = 验证码错误 </li><li>47 = 重复商家订单 </li><li>48 = 钱格式不正确 </li><li>49 = 余额不足 </li><li>50 = 支付方式不正确 </li><li>51 = 编码格式不正确 </li></ul></li><li><p><code>msg</code>: 提示语</p></li><li><p><code>data</code></p><ul><li><code>otcOrderId</code>: string, sdk订单号</li><li><code>timestamp</code>: long, gf端订单创建时间</li><li><code>merchantOrderId</code>: string, 你的订单号</li><li><code>extra</code>: string, 你的额外信息    <br/></li></ul></li></ul></li></ul></li><li><p>厂商转账成功后, 厂商在<code>asyncNoticeUrl</code>接口会接收到eGF的转账成功的通知</p><ul><li><p>eGF调用方式:</p><ul><li><p>method: <code>GET</code></p></li><li><p>url: <code>asyncNoticeUrl?extra=x&amp;merchantId=x&amp;merchantOrderId=x&amp;money=x&amp;otcOrderId=x&amp;payeeId=x&amp;payerId=x&amp;payType=x&amp;sign=x</code> </p><ul><li><p><code>extra</code>: 创建订单时携带的备注信息, 原封不动返回, 返回URLEncode(extra)之后的extra</p></li><li><p><code>merchantId</code>: 厂商id</p></li><li><p><code>merchantOrderId</code>: 厂商的订单编号</p></li><li><p><code>money</code>: 订单金额, gfg*10^8</p></li><li><p><code>otcOrderId</code>: eGF订单id</p></li><li><p><code>payType</code>: 支付方式, 当前只能是<code>gfg</code></p></li><li><p><code>payeeId</code>: 收款人的eGFid</p></li><li><p><code>payerId</code>: 付款人的eGFid</p></li><li><p><code>sign</code>: 签名, </p><ul><li>只有签名验证通过, 才能确认是eGF的通知</li><li>签名采用32位md5小写的形式</li><li>sign= md5(&quot;extra=x&amp;merchantId=x&amp;merchantOrderId=x&amp;money=x&amp;otcOrderId=x&amp;payeeId=x&amp;payerId=x&amp;payType=x&amp;secretKey=x&quot;)</li><li>如果可选的参数为null, 参数名也需要参与签名. 比如. extra=null, sign= md5(&quot;extra=&amp;merchantId=x&amp;merchantOrderId=x&amp;money=x&amp;otcOrderId=x&amp;payeeId=x&amp;payerId=x&amp;payType=x&amp;secretKey=x&quot;)</li></ul></li></ul></li></ul></li><li><p>通知频率</p><ul><li>以第一次进入线程为起始时间，一分钟前，每十秒通知三次</li><li>一分钟至五分钟，每分钟通知三次</li><li>五分钟至半小时，每五分钟通知三次</li><li>半小时过至一天，每半小时通知三次</li><li>一天过后不通知</li></ul></li></ul></li></ol></div>
+</body>
+</html>
